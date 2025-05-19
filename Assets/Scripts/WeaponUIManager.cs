@@ -27,7 +27,6 @@ public class WeaponUIManager : MonoBehaviour
         if (weaponItemUIs.Count > 1)
         weaponItemUIs[1].UpdateStatus(WeaponStatus.Rented);
         
-        //Callback for Buttons
         useButton.onClick.AddListener(OnUseWeapon);
         rentOutButton.onClick.AddListener(OnRentOutWeapon);
     }
@@ -42,7 +41,6 @@ public class WeaponUIManager : MonoBehaviour
         reloadSpeedText.text = weapon.GetReloadSpeed() + "%";
         ammoText.text = weapon.GetAmmo() + "/100";
 
-        // Save currently selected weapon 
         currentSelected = weapon;
     }
 
